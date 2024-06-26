@@ -26,7 +26,7 @@
   <div class="ccontent">
     <div class="content heading">
       <div id="contact-list" class="div_left">
-        <img src="photo.jpg" class="img-circle" />
+        <img src="./assets/img/photo.jpg" class="img-circle" />
       </div>
       <div id="contact-list" class="div_right">
         <h1>Chen Tang 唐辰</h1>
@@ -34,36 +34,28 @@
         <p>Department of Computer Science and Technology, Tsinghua University</p>
         <p>tangc [AT] tsinghua [DOT] edu [DOT] cn / tangchen18 [AT] outlook [DOT] com</p>
         <p> [<a href="https://scholar.google.com/citations?user=WjZUs1AAAAAJ&hl=en" target="_blank">Google
-            Scholar</a>] 
-            [<a href="https://openreview.net/profile?id=~Chen_Tang3" target="_blank">OpenReview</a>] 
-            [<a href="#" target="_blank">LinkedIn</a>] 
-            [<a href="https://github.com/1hunters" target="_blank">GitHub</a>]</p>
-        <div id="contact-list">
-          <ul class="list-unstyled list-inline">
-          </ul>
-        </div>
+            Scholar</a>]
+          [<a href="https://openreview.net/profile?id=~Chen_Tang3" target="_blank">OpenReview</a>]
+          [<a href="#" target="_blank">LinkedIn</a>]
+          [<a href="https://github.com/1hunters" target="_blank">GitHub</a>]</p>
       </div>
     </div>
-
-    <!--<div class="page-header">-->
-    <!--<h1>Homepage </h1>-->
-    <!--</div>-->
-
+    
     <div class="Bio">
       <header>
         <h1 margin="0px"> Short Bio</h1>
       </header>
-      <p> 
+      <p>
         I am currently a research assistant in the <a href="https://www.cs.tsinghua.edu.cn/csen/"
-          target="_blank">Department of Computer Science and Technology</a> at <a href="https://www.tsinghua.edu.cn/en/"
-          target="_blank">Tsinghua University</a>, working with Prof. <a href="https://www.cs.tsinghua.edu.cn/csen/info/1306/4336.htm" target="_blank">Wenwu
-          Zhu</a>, Prof. <a href="https://www.mmlab.top" target="_blank">Zhi
-          Wang</a>, and Prof. <a href="https://mengyuan404.github.io" target="_blank">Yuan Meng</a>. 
-          I will be joining <a href="https://mmlab.ie.cuhk.edu.hk" target="_blank">Multimedia Laboratory
-          </a> (MMLab), <a href="https://www.cuhk.edu.hk" target="_blank">The Chinese University of Hong Kong</a> as a Ph.D. student, co-supervised by Prof. <a href="https://wlouyang.github.io/" target="_blank">Wanli Ouyang</a> and Prof. <a href="https://xyue.io/" target="_blank">Xiangyu Yue</a>. 
-        I received my Master's degree in Computer Technology from Tsinghua University, advised by Prof. <a
-          href="https://www.mmlab.top" target="_blank">Zhi Wang</a>. 
-        My research interests are in AI for science, efficient learning, multimodal learning, and generative learning. 
+        target="_blank">Department of Computer Science and Technology</a> at <a href="https://www.tsinghua.edu.cn/en/"
+        target="_blank">Tsinghua University</a>, working with Prof. <a href="https://www.cs.tsinghua.edu.cn/csen/info/1306/4336.htm" target="_blank">Wenwu
+        Zhu</a>, Prof. <a href="https://www.mmlab.top" target="_blank">Zhi
+        Wang</a>, and Prof. <a href="https://mengyuan404.github.io" target="_blank">Yuan Meng</a>. 
+        I will be joining <a href="https://mmlab.ie.cuhk.edu.hk" target="_blank">Multimedia Laboratory
+        </a> (MMLab), <a href="https://www.cuhk.edu.hk" target="_blank">The Chinese University of Hong Kong</a> as a Ph.D. student, co-supervised by Prof. <a href="https://wlouyang.github.io/" target="_blank">Wanli Ouyang</a> and Prof. <a href="https://xyue.io/" target="_blank">Xiangyu Yue</a>. 
+      I received my Master's degree in Computer Technology from Tsinghua University, advised by Prof. <a
+        href="https://www.mmlab.top" target="_blank">Zhi Wang</a>. 
+      My research interests are in AI for science, efficient learning, multimodal learning, and generative learning. 
       </p>
       <p>
         I was a visiting student at AIoT Lab, <a href="https://air.tsinghua.edu.cn/en/" target="_blank">Institute for AI Industry Research (AIR)</a> at Tsinghua University, working with Prof. <a href="https://yuanchun-li.github.io/" target="_blank">Yuanchun Li</a> and Prof. <a href="https://yunxinliu.github.io/" target="_blank">Yunxin Liu</a>. 
@@ -105,104 +97,177 @@
 
     <div class="Publication">
       <header>
-        <h1 id="pubs"> Selected Publications and Preprints </h1> (*: Equal contributions)
+        <h1 id="pubs"> Selected Publications and Preprints </h1>
+        <a id="sortByYear" class="sort-link" onclick="sortPapers('year')">[Sord by year]</a>
+        <a id="sortByAuthor" class="sort-link" onclick="sortPapers('author')">[Sord by authorship]</a>
+        (*: Equal contributions) 
       </header>
-      <ul style="padding-left:2em">
-        <li>
-          <p><strong>Retraining-free Model Quantization via One-Shot Weight-Coupling Learning</strong><br>
-            <strong>Chen Tang</strong>*, Yuan Meng*, Jiacheng Jiang, Shuzhao Xie, Rongwei Lu, Xinzhu Ma, Zhi Wang, Wenwu Zhu<br>
-            <u>[CVPR'24]</u> <em>IEEE Conference on Computer Vision and Pattern Recognition</em>, 2024 
-            [<a href="./paper/CVPR_retraining_free_quantization.pdf" target="_blank">PDF</a>] 
-            [<a href="./paper/CVPR_retraining_free_quantization_suppl.pdf" target="_blank">Supp</a>] 
-            [<a href="https://github.com/1hunters/retraining-free-quantization/">Code</a>] 
+      <br>
+      <ul style="padding-left:2em" id="paperList">
+        <li data-year="2024" data-first-author="false">
+          <p class="paper"><strong>Q-DiT: Accurate Post-Training Quantization for Diffusion Transformers</strong><br>
+            Lei Chen, Yuan Meng, <strong>Chen Tang</strong>, Xinzhu Ma, Jingyan Jiang, Xin Wang, Zhi Wang, Wenwu Zhu<br>
+            <em>Preprint</em>, 2024
+            [<a href="https://arxiv.org/pdf/2406.17343" target="_blank">PDF</a>] 
+            [<a href="https://github.com/Juanerx/Q-DiT/" target="_blank">Code</a>]
           </p>
         </li>
 
-        <li>
-          <p><strong>SEAM: Searching Transferable Mixed-Precision Quantization Policy through Large Margin
+        <li data-year="2024" data-first-author="true">
+          <p class="paper"><strong>RFQuant: Retraining-free Model Quantization via One-Shot Weight-Coupling Learning</strong><br>
+            <strong>Chen Tang</strong>*, Yuan Meng*, Jiacheng Jiang, Shuzhao Xie, Rongwei Lu, Xinzhu Ma, Zhi Wang, Wenwu
+            Zhu<br>
+            <u>[CVPR'24]</u> <em>IEEE Conference on Computer Vision and Pattern Recognition</em>, 2024
+            [<a href="./assets/paper/CVPR_retraining_free_quantization.pdf" target="_blank">PDF</a>]
+            [<a href="./assets/paper/CVPR_retraining_free_quantization_suppl.pdf" target="_blank">Supp</a>]
+            [<a href="./assets/poster/CVPR24_retraining_free_quantization_poster.pdf" target="_blank">Poster</a>]
+            [<a href="https://github.com/1hunters/retraining-free-quantization/" target="_blank">Code</a>]
+          </p>
+        </li>
+        
+        <li data-year="2024" data-first-author="true">
+          <p class="paper"><strong>TMPQ-DM: Joint Timestep Reduction and Quantization Precision
+              Selection for Efficient Diffusion Models</strong><br>
+            Haojun Sun*, <strong>Chen Tang</strong>*, Zhi Wang, Yuan Meng, Jingyan Jiang, Xinzhu Ma, Wenwu Zhu<br>
+            <em>Preprint</em>, 2024
+            [<a href="https://arxiv.org/pdf/2404.09532.pdf" target="_blank">PDF</a>]
+            [<a
+              href="https://mmlabsigs.notion.site/TMPQ-DM-Joint-Timestep-Reduction-and-Quantization-Precision-Selection-for-Efficient-Diffusion-Model-ea0af24bd3ef4929a1bc07c364ce4ac5?pvs=74"
+              target="_blank">Project</a>]
+            [<a href="https://github.com/sihouzi21c/TMPQ-DM" target="_blank">Code</a>]
+          </p>
+        </li>
+
+        <li data-year="2024" data-first-author="false">
+          <p class="paper"><strong>STAR: Skeleton-aware Text-based 4D Avatar
+              Generation with In-Network Motion Retargeting</strong><br>
+            Zenghao Chai, <strong>Chen Tang</strong>, Yongkang Wong, Mohan Kankanhalli<br>
+            In submission to <em>IEEE Transactions on Visualization and Computer Graphics (TVCG)</em>, 2024
+            [<a href="https://arxiv.org/pdf/2406.04629" target="_blank">PDF</a>]
+            [<a href="https://star-avatar.github.io/" target="_blank">Project</a>]
+            [<a href="https://github.com/czh-98/STAR" target="_blank">Code</a>]
+          </p>
+        </li>
+
+        <li data-year="2024" data-first-author="false">
+          <p class="paper"><strong>One QuantLLM for ALL: Fine-tuning Quantized LLMs Once for Efficient
+              Deployments</strong><br>
+            Ke Yi, Yuhui Xu, Heng Chang, <strong>Chen Tang</strong>, Yuan Meng, Tong Zhang, Jia Li<br>
+            <em>Preprint</em>, 2024
+            [<a href="https://arxiv.org/pdf/2405.20202" target="_blank">PDF</a>]
+            [<a href="#" target="_blank">Code</a>]
+          </p>
+        </li>
+
+        <li data-year="2024" data-first-author="false">
+          <p class="paper"><strong>Evaluating the Generalization Ability of Quantized LLMs: Benchmark, Analysis, and
+              Toolbox</strong><br>
+            Yijun Liu, Yuan Meng, Fang Wu, Shenhao Peng, Hang Yao, Chaoyu Guan, <strong>Chen Tang</strong>, Xinzhu Ma,
+            Zhi Wang, Wenwu Zhu<br>
+            <em>Preprint</em>, 2024
+            [<a href="https://arxiv.org/pdf/2406.12928" target="_blank">PDF</a>]
+            [<a href="https://github.com/TsingmaoAI/MI-optimize" target="_blank">Toolbox</a>]
+          </p>
+        </li>
+
+        <li data-year="2024" data-first-author="false">
+          <p class="paper"><strong>Investigating the Impact of Quantization on Adversarial Robustness</strong><br>
+            Qun Li, Yuan Meng, <strong>Chen Tang</strong>, Jiacheng Jiang, Zhi Wang<br>
+            <u>[ICLR PML4LRS'24]</u> <em>International Conference on Learning Representations (Workshop on Practical ML
+              for Limited Resource Settings)</em>, 2024
+            [<a href="https://arxiv.org/pdf/2404.05639.pdf" target="_blank">PDF</a>]
+          </p>
+        </li>
+
+        <li data-year="2024" data-first-author="false">
+          <p class="paper"><strong>DAGC: Data-aware Adaptive Sparsification Gradient Compression for Distributed Machine
+              Learning in Mobile Computing</strong><br>
+            Rongwei Lu, Yutong Jiang, Yinan Mao, <strong>Chen Tang</strong>, Bin Chen, Laizhong Cui, Zhi Wang<br>
+            In submission to <em>IEEE Transactions on Mobile Computing (TMC)</em>, 2024
+            [<a href="https://arxiv.org/pdf/2311.07324" target="_blank">PDF</a>]
+          </p>
+        </li>
+
+        <li data-year="2023" data-first-author="true">
+          <p class="paper"><strong>Knowledge Soft Integration for Multimodal Recommendation</strong><br>
+            Kai Ouyang*, <strong>Chen Tang</strong>*, Wenhao Zheng, Xiangjin Xie, Xuanji Xiao, Jian Dong, Hai-tao Zheng,
+            Zhi Wang<br>
+            <em>Preprint</em>, 2023
+            [<a href="https://arxiv.org/pdf/2305.07419.pdf" target="_blank">PDF</a>]
+          </p>
+        </li>
+
+        <li data-year="2023" data-first-author="false">
+          <p class="paper"><strong>Click-aware Structure Transfer with Sample Weight Assignment for Post-Click
+              Conversion Rate
+              Estimation</strong><br>
+            Kai Ouyang, Wenhao Zheng, <strong>Chen Tang</strong>, Xuanji Xiao, Hai-tao Zheng<br>
+            <u>[ECML-PKDD'23]</u> <em>European Conference on Machine Learning and Principles and Practice of Knowledge
+              Discovery in Databases</em>, 2023 [<a href="https://arxiv.org/pdf/2304.01169.pdf" target="_blank">PDF</a>]
+            [<a href="https://github.com/OuyKai/CSTWA" target="_blank">Code</a>]
+          </p>
+        </li>
+
+        <li data-year="2023" data-first-author="true">
+          <p class="paper"><strong>SEAM: Searching Transferable Mixed-Precision Quantization Policy through Large Margin
               Regularization</strong><br>
             <strong>Chen Tang</strong>, Kai Ouyang, Zenghao Chai, Yunpeng Bai, Yuan Meng, Zhi Wang, Wenwu Zhu<br>
-            <u>[ACM MM'23]</u> <em>ACM International Conference on Multimedia</em>, 2023 
-            [<a href="https://dl.acm.org/doi/pdf/10.1145/3581783.3611975" target="_blank">PDF</a>] 
-            [<a href="./assets/MM23_SEAM_poster.pdf" target="_blank">Poster</a>] 
+            <u>[ACM MM'23]</u> <em>ACM International Conference on Multimedia</em>, 2023
+            [<a href="https://dl.acm.org/doi/pdf/10.1145/3581783.3611975" target="_blank">PDF</a>]
           </p>
         </li>
 
-        <li>
-          <p><strong>ElasticViT: Conflict-aware Supernet Training for Deploying Fast Vision Transformer on Diverse
+        <li data-year="2023" data-first-author="true">
+          <p class="paper"><strong>ElasticViT: Conflict-aware Supernet Training for Deploying Fast Vision Transformer on
+              Diverse
               Mobile Devices</strong><br>
             <strong>Chen Tang</strong>*, Li Lyna Zhang*, Huiqiang Jiang, Jiahang
             Xu, Ting Cao, Quanlu Zhang, Yuqing Yang, Zhi Wang, Mao Yang<br>
-            <u>[ICCV'23]</u> <em>International Conference on Computer Vision</em>, 2023 
-              [<a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Tang_ElasticViT_Conflict-aware_Supernet_Training_for_Deploying_Fast_Vision_Transformer_on_ICCV_2023_paper.pdf" target="_blank">PDF</a>] 
-              [<a href="https://openaccess.thecvf.com/content/ICCV2023/supplemental/Tang_ElasticViT_Conflict-aware_Supernet_ICCV_2023_supplemental.pdf" target="_blank">Supp</a>] 
-              [<a href="./assets/ICCV23_ElasticViT_poster.pdf" target="_blank">Poster</a>] 
-              [<a href="https://github.com/microsoft/Moonlit/tree/main/ElasticViT" target="_blank">Code</a>]
-            </p>
+            <u>[ICCV'23]</u> <em>International Conference on Computer Vision</em>, 2023
+            [<a
+              href="https://openaccess.thecvf.com/content/ICCV2023/papers/Tang_ElasticViT_Conflict-aware_Supernet_Training_for_Deploying_Fast_Vision_Transformer_on_ICCV_2023_paper.pdf"
+              target="_blank">PDF</a>]
+            [<a
+              href="https://openaccess.thecvf.com/content/ICCV2023/supplemental/Tang_ElasticViT_Conflict-aware_Supernet_ICCV_2023_supplemental.pdf"
+              target="_blank">Supp</a>]
+            [<a href="./assets/poster/ICCV23_ElasticViT_poster.pdf" target="_blank">Poster</a>]
+            [<a href="https://github.com/microsoft/Moonlit/tree/main/ElasticViT" target="_blank">Code</a>]
+          </p>
           </p>
         </li>
 
-        <li>
-          <p><strong>Mixed-Precision Network Quantization via Learned Layer-wise Importance</strong><br>
+        <li data-year="2022" data-first-author="true">
+          <p class="paper"><strong>Mixed-Precision Network Quantization via Learned Layer-wise Importance</strong><br>
             <strong>Chen Tang</strong>*, Kai Ouyang*, Zhi Wang, Yifei Zhu, Wen Ji,
             Yaowei Wang, Wenwu Zhu<br>
-            <u>[ECCV'22]</u> <em>European Conference on Computer Vision</em>, 2022 
+            <u>[ECCV'22]</u> <em>European Conference on Computer Vision</em>, 2022
             [<a href="https://arxiv.org/pdf/2203.08368.pdf" target="_blank">PDF</a>]
-            [<a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136710260-supp.pdf" target="_blank">Supp</a>] 
-            [<a href="https://mmlabsigs.notion.site/Mixed-Precision-Neural-Network-Quantization-via-Learned-Layer-wise-Importance-18f8e075f20f4b9b99564c6d35a18744/" target="_blank">Project</a>] 
-            [<a href="assets/ECCV22_LIMPQ_poster.pdf" target="_blank">Poster</a>]
+            [<a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136710260-supp.pdf"
+              target="_blank">Supp</a>]
+            [<a
+              href="https://mmlabsigs.notion.site/Mixed-Precision-Neural-Network-Quantization-via-Learned-Layer-wise-Importance-18f8e075f20f4b9b99564c6d35a18744/"
+              target="_blank">Project</a>]
+            [<a href="./assets/poster/ECCV22_LIMPQ_poster.pdf" target="_blank">Poster</a>]
             [<a href="https://github.com/1hunters/LIMPQ" target="_blank">Code</a>]
           </p>
         </li>
 
-        <li>
-          <p><strong>Arbitrary Bit-width Network: A Joint Layer-Wise Quantization and Adaptive Inference
+        <li data-year="2022" data-first-author="true">
+          <p class="paper"><strong>Arbitrary Bit-width Network: A Joint Layer-Wise Quantization and Adaptive Inference
               Approach</strong><br>
             <strong>Chen Tang</strong>, Haoyu Zhai, Kai Ouyang, Zhi Wang, Yifei Zhu, Wenwu Zhu<br>
-            <u>[ACM MM'22]</u> <em>ACM International Conference on Multimedia</em>, 2022 
+            <u>[ACM MM'22]</u> <em>ACM International Conference on Multimedia</em>, 2022
             [<a href="https://arxiv.org/pdf/2204.09992.pdf" target="_blank">PDF</a>]
           </p>
         </li>
 
-        <li>
-          <p><strong>TMPQ-DM: Joint Timestep Reduction and Quantization Precision
-            Selection for Efficient Diffusion Models</strong><br>
-            Haojun Sun*, <strong>Chen Tang</strong>*, Zhi Wang, Yuan Meng, Jingyan Jiang, Xinzhu Ma, Wenwu Zhu<br>
-            <em>Preprint</em>, 2024 
-            [<a href="https://arxiv.org/pdf/2404.09532.pdf" target="_blank">PDF</a>]
-          </p>
-        </li>
-
-        <li>
-          <p><strong>Investigating the Impact of Quantization on Adversarial Robustness</strong><br>
-            Qun Li, Yuan Meng, <strong>Chen Tang</strong>, Jiacheng Jiang, Zhi Wang<br>
-            <u>[ICLR PML4LRS'24]</u> <em>International Conference on Learning Representations (Workshop on Practical ML for Limited Resource Settings)</em>, 2024 
-            [<a href="https://arxiv.org/pdf/2404.05639.pdf" target="_blank">PDF</a>] 
-          </p>
-        </li>
-
-        <li>
-          <p><strong>Knowledge Soft Integration for Multimodal Recommendation</strong><br>
-            Kai Ouyang*, <strong>Chen Tang</strong>*, Wenhao Zheng, Xiangjin Xie, Xuanji Xiao, Jian Dong, Hai-tao Zheng, Zhi Wang<br>
-            <em>Preprint</em>, 2023 
-            [<a href="https://arxiv.org/pdf/2305.07419.pdf" target="_blank">PDF</a>] 
-          </p>
-        </li>
-
-        <li>
-          <p><strong>Click-aware Structure Transfer with Sample Weight Assignment for Post-Click Conversion Rate
-              Estimation</strong><br>
-            Kai Ouyang, Wenhao Zheng, <strong>Chen Tang</strong>, Xuanji Xiao, Hai-tao Zheng<br>
-            <u>[ECML-PKDD'23]</u> <em>European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases</em>, 2023 [<a href="https://arxiv.org/pdf/2304.01169.pdf" target="_blank">PDF</a>] [<a
-              href="https://github.com/OuyKai/CSTWA" target="_blank">Code</a>]
-          </p>
-        </li>
-
-        <li>
-          <p><strong>Social-aware Sparse Attention Network for Session-based Social Recommendation</strong><br>
+        <li data-year="2023" data-first-author="false">
+          <p class="paper"><strong>Social-aware Sparse Attention Network for Session-based Social
+              Recommendation</strong><br>
             Kai Ouyang, Xianghong Xu, <strong>Chen Tang</strong>, Wang Chen, Hai-tao Zheng<br>
-            <u>[Findings of EMNLP'22]</u> <em>Findings of Conference on Empirical Methods in Natural Language Processing</em>, 2022 [<a
-              href="https://aclanthology.org/2022.findings-emnlp.159.pdf" target="_blank">PDF</a>]
+            <u>[Findings of EMNLP'22]</u> <em>Findings of Conference on Empirical Methods in Natural Language
+              Processing</em>, 2022 [<a href="https://aclanthology.org/2022.findings-emnlp.159.pdf"
+              target="_blank">PDF</a>]
           </p>
         </li>
       </ul>
@@ -253,7 +318,7 @@
 
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>
