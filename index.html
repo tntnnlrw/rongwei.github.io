@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Rongwei Lu - Tsinghua University SIGS</title>
+  <title>Rongwei Lu - SIGS, Tsinghua University</title>
 
   <!-- Enable responsive viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,18 +21,29 @@
 
 </head>
 
+<script>
+function showBibtex(id) {
+  var bibtex = document.getElementById(id);
+  if (bibtex.style.display === "none") {
+    bibtex.style.display = "block";
+  } else {
+    bibtex.style.display = "none";
+  }
+}
+</script>
+
 <body>
 
   <div class="ccontent">
     <div class="content heading">
       <div id="contact-list" class="div_left">
-        <img src="./assets/img/photo.jpg" class="img-circle" />
+        <img src="./assets/img/photo_lu.jpg" class="img-circle" />
       </div>
       <div id="contact-list" class="div_right">
         <h1>Rongwei Lu 路荣伟</h1>
         <p>Ph.D student</p>
-        <p>Tsinghua Shenzhen International Graduate School, Tsinghua University</p>
-        <p>lurw24@tsinghua.edu.cn</p>
+        <p>Shenzhen International Graduate School, Tsinghua University</p>
+        <p>lurw24 [AT] mails [DOT] tsinghua [DOT] edu [DOT] cn</p>
         <p> [<a href="https://scholar.google.com.hk/citations?view_op=list_works&hl=zh-CN&user=LTuxD0wAAAAJ" target="_blank">Google
             Scholar</a>]
           [<a href="https://openreview.net/profile?id=~Rongwei_Lu1" target="_blank">OpenReview</a>]
@@ -46,7 +57,7 @@
         <h1 margin="0px"> Short Bio</h1>
       </header>
       <p>
-        I am currently a third-year Ph.D's student in the <a href="https://www.cs.tsinghua.edu.cn/csen/"
+        I am currently a forth-year Ph.D's student in the <a href="https://www.cs.tsinghua.edu.cn/csen/"
         target="_blank">Department of Computer Science and Technology</a> at <a href="https://www.tsinghua.edu.cn/en/"
         target="_blank">Tsinghua University</a>, advised by Prof. <a
         href="https://www.mmlab.top" target="_blank">Zhi Wang</a>. 
@@ -55,8 +66,8 @@
       <p>
         I was a research intern in the <a
         href="https://www.microsoft.com/en-us/research/group/systems-and-networking-research-group-asia/"
-        target="_blank">System and Networking Research Group </a> at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/" target="_blank">Microsoft Research Asia</a>.
-        I have served as a reviewer for ACM Multimedia, and NeurIPS.
+        target="_blank">System and Networking Research Group at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/" target="_blank">Microsoft Research Asia</a>.
+        I have published several papers in IEEE INFOCOM, Transactions on Mobile Computing, and served as a reviewer for ICML, NeurIPS, MM, and other conferences.
       </p>
     </div>
 
@@ -65,19 +76,19 @@
         <h1> News</h1>
       </header>
       <ul style="padding-left:2em">
-        <li>
+          <li>
           <p>
-            [2024/12] One paper got accepted to INFOCOM 2025.
+            [2024/11] One paper got accepted to IEEE INFOCOM 2025.
           </p>
-        </li>
+	</li>
         <li>
           <p>
             [2024/11] One paper got accepted to IEEE TMC.
           </p>
-        </li>
-        <li>
-          <p>
-            [2023/04] One paper got accepted to INFOCOM 2023.
+	</li>
+	<li>
+	  <p>
+            [2023/04] One paper got accepted to IEEE INFOCOM 2023.
           </p>
         </li>
       </ul>
@@ -93,14 +104,42 @@
       <br>
       <ul style="padding-left:2em" id="paperList">
 
+      <li data-year="2025" data-first-author="false">
+          <p class="paper"><strong>Llm4band: Enhancing reinforcement learning with large language models for accurate bandwidth estimation</strong><br>
+            Zhijian Wang, <strong>Rongwei Lu</strong>, Zhiyang Zhang, Cedric Westphal, Dongbiao He, Jingyan Jiang<br>
+            <u>[NOSSDAV'25]</u>,  <em>Proceedings of the 35th Workshop on Network and Operating System Support for Digital Audio and Video
+</em>, 2025
+         </p>
+        </li>
+
         <li data-year="2024" data-first-author="true">
           <p class="paper"><strong>γ-FedHT: Stepsize-Aware Adaptive Hard-Threshold Gradient Compression in Federated Learning</strong><br>
             <strong>Rongwei Lu</strong>,Yutong Jiang, Jinrui Zhang, Mingzhou Wu, Chen Tang, Bin Chen and Zhi Wang <br>
             <u>[INFOCOM'25]</u>,  <em>IEEE International Conference on Computer Communications</em>, 2024
-            <!--[<a href="https://arxiv.org/abs/2311.07324" target="_blank">PDF</a>]
-             [<a href="./assets/paper/CVPR_retraining_free_quantization_suppl.pdf" target="_blank">Supp</a>]
-            [<a href="./assets/poster/CVPR24_retraining_free_quantization_poster.pdf" target="_blank">Poster</a>] 
-            [<a href="https://github.com/Jiang-Yutong/DAGC" target="_blank">Code</a>]-->
+            [<a href="https://young-0516.github.io/Demonstration/FedHT/" target="_blank">Project</a>]
+            [<a href="https://arxiv.org/abs/2505.12479" target="_blank">Arxiv</a>]
+            [<a href="#" onclick="showBibtex('fedht'); return false;">BibTeX</a>]
+          </p>
+          <div id="fedht" style="display: none;">
+            <pre>@inproceedings{lu2025fedht,
+              title={$gamma $-FedHT: Stepsize-Aware Hard-Threshold Gradient Compression in Federated Learning},
+              author={Lu, Rongwei and Jiang, Yutong and Zhang, Jinrui and Li, Chunyang and Zhu, Yifei and Chen, Bin and Wang, Zhi},
+              booktitle={IEEE INFOCOM 2025},
+              year={2025}
+            }</pre>
+          </div>
+        </li>
+
+        <li data-year="2024" paper-weighting=3>
+          <p class="paper"><strong>MesonGS: Post-training Compression of 3D Gaussians via Efficient Attribute Transformation
+          </strong><br>
+            Shuzhao Xie, Weixiang Zhang, Chen Tang, Yunpeng Bai, <strong>Rongwei Lu</strong>, Shijia Ge, Zhi Wang<br>
+            [ECCV'24] <em>European Conference on Computer Vision</em>, 2024
+            [<a href="./assets/paper/ECCV_mesongs.pdf" target="_blank">PDF</a>] 
+            [<a href="https://shuzhaoxie.github.io/data/24-eccv-mesongs-supp.pdf" target="_blank">Supp</a>] 
+            [<a href="https://shuzhaoxie.github.io/mesongs" target="_blank">Project</a>] 
+            [<a href="./assets/poster/ECCV24_MesonGS_poster.pdf" target="_blank">Poster</a>] 
+            [<a href="https://github.com/ShuzhaoXie/MesonGS" target="_blank">Code</a>] 
           </p>
         </li>
 
@@ -113,18 +152,40 @@
             [<a href="./assets/paper/CVPR_retraining_free_quantization_suppl.pdf" target="_blank">Supp</a>]
             [<a href="./assets/poster/CVPR24_retraining_free_quantization_poster.pdf" target="_blank">Poster</a>]
             [<a href="https://github.com/1hunters/retraining-free-quantization/" target="_blank">Code</a>]
+             [<a href="#" onclick="showBibtex('rfquant2024'); return false;">BibTeX</a>]
           </p>
+          <div id="rfquant2024" style="display: none;">
+            <pre>@inproceedings{tang2024retraining,
+              title={Retraining-free model quantization via one-shot weight-coupling learning},
+              author={Tang, Chen and Meng, Yuan and Jiang, Jiacheng and Xie, Shuzhao and Lu, Rongwei and Ma, Xinzhu and Wang, Zhi and Zhu, Wenwu},
+              booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+              pages={15855--15865},
+              year={2024}
+            }</pre>
+          </div>
         </li>
+
 
         <li data-year="2024" data-first-author="true">
           <p class="paper"><strong>DAGC: Data-Volume-Aware Adaptive Sparsification Gradient Compression for Distributed Machine Learning in Mobile Computing</strong><br>
-            <strong>Rongwei Lu</strong>,Yutong Jiang, Jinrui Zhang, Mingzhou Wu, Chen Tang, Bin Chen and Zhi Wang <br>
+            <strong>Rongwei Lu</strong>,Yutong Jiang, Yinan Mao, Chen Tang, Bin Chen, Laizhong Cui and Zhi Wang <br>
             <u>[IEEE TMC]</u> <em>IEEE Transactions on Mobile Computing</em>, 2024
+            [<a href="https://young-0516.github.io/Demonstration/DAGC/" target="_blank">Project</a>]
             [<a href="https://ieeexplore.ieee.org/document/10759817/" target="_blank">PDF</a>]
             [<a href="https://ieeexplore.ieee.org/ielx8/7755/4358975/10759817/supp1-3504284.pdf?arnumber=10759817" target="_blank">Supp</a>]
-            <!-- [<a href="./assets/poster/CVPR24_retraining_free_quantization_poster.pdf" target="_blank">Poster</a>] -->
             [<a href="https://github.com/Jiang-Yutong/DAGC" target="_blank">Code</a>]
+            [<a href="#" onclick="showBibtex('dagc24'); return false;">BibTeX</a>]
           </p>
+          <div id="dagc24" style="display: none;">
+            <pre>@article{lu2024dagc,
+title={Data-Aware Gradient Compression for FL in Communication-Constrained Mobile Computing},
+author={Lu, Rongwei and Jiang, Yutong and Mao, Yinan and Tang, Chen and Chen, Bin and Cui, Laizhong and Wang, Zhi},
+journal={IEEE Transactions on Mobile Computing},
+year={2024},
+publisher={IEEE}
+}
+</pre>
+          </div>          
         </li>
 
         <li data-year="2023" data-first-author="true">
@@ -132,8 +193,19 @@
             <strong>Rongwei Lu</strong>, Jiajun Song, Bin Chen, Laizhong Cui  and Zhi Wang<br>
             <u>[INFOCOM'23]</u>, <em>International Conference on Computer Communications</em> , 2023
             [<a href="https://arxiv.org/abs/2311.07324" target="_blank">PDF</a>] 
-            <!-- [<a href="https://github.com/Juanerx/Q-DiT/" target="_blank">Code</a>] -->
+            [<a href="#" onclick="showBibtex('dagc23'); return false;">BibTeX</a>]
           </p>
+          <div id="dagc23" style="display: none;">
+            <pre>@inproceedings{lu2023dagc,
+title={Dagc: Data-aware adaptive gradient compression},
+author={Lu, Rongwei and Song, Jiajun and Chen, Bin and Cui, Laizhong and Wang, Zhi},
+booktitle={IEEE INFOCOM 2023-IEEE Conference on Computer Communications},
+pages={1--10},
+year={2023},
+organization={IEEE}
+}
+</pre>
+          </div>             
         </li>
       </ul>
 
