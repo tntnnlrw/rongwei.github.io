@@ -76,6 +76,11 @@ function showBibtex(id) {
         <h1> News</h1>
       </header>
       <ul style="padding-left:2em">
+        <li>
+          <p>
+            [2024/11] One paper got accepted to ICCV 2025.
+          </p>
+	</li>
           <li>
           <p>
             [2024/11] One paper got accepted to IEEE INFOCOM 2025.
@@ -103,6 +108,28 @@ function showBibtex(id) {
       </header>
       <br>
       <ul style="padding-left:2em" id="paperList">
+
+      <li data-year="2025" data-first-author="false">
+          <p class="paper"><strong>DICE: Staleness-Centric Optimizations for Parallel Diffusion MoE Inference</strong><br>
+            Jiajun Luo, Lizhuo Luo, Jianru Xu, Jiajun Song, <strong>Rongwei Lu</strong>, Zhi Wang<br>
+            <u>[ICCV'25]</u>,  <em>IEEE/CVF International Conference on Computer Vision
+</em>, 2025
+            [<a href="https://arxiv.org/abs/2411.16786" target="_blank">Arxiv</a>]
+            [<a href="#" onclick="showBibtex('dice'); return false;">BibTeX</a>]
+         </p>
+                   <div id="dice" style="display: none;">
+            <pre>@misc{luo2025stalenesscentricoptimizationsparalleldiffusion,
+      title={Staleness-Centric Optimizations for Parallel Diffusion MoE Inference}, 
+      author={Jiajun Luo and Lizhuo Luo and Jianru Xu and Jiajun Song and Rongwei Lu and Chen Tang and Zhi Wang},
+      year={2025},
+      eprint={2411.16786},
+      archivePrefix={arXiv},
+      primaryClass={cs.DC},
+      url={https://arxiv.org/abs/2411.16786}
+    }</pre>
+          </div>
+        </li>
+
 
       <li data-year="2025" data-first-author="false">
           <p class="paper"><strong>Llm4band: Enhancing reinforcement learning with large language models for accurate bandwidth estimation</strong><br>
